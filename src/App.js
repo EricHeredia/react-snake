@@ -21,7 +21,6 @@ function App() {
     [4, 0]
   ])
 
-
   useEffect(() => {
     moveSnake()
   },[direction])
