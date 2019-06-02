@@ -6,7 +6,7 @@
   border: 2px solid #000;
 }
 
-.snake-dot {
+.snake-body {
   position: absolute;
   width: 2%;
   height: 2%;

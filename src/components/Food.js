@@ -3,8 +3,8 @@ import React from 'react'
 const Food = (props) => {
 
   const style = {
-    left: `${props.dot[0]}%`,
-    top: `${props.dot[1]}%`
+    left: `${props.food[0]}%`,
+    top: `${props.food[1]}%`
   }
   
   return (
