@@ -6,21 +6,50 @@ import './App.css'
 
 function App() {
 
+  const [snakeBody, setSnakeBody] = useState([
+    [0, 0],
+    [2, 0],
+    [4, 0],
+    [6, 0],
+    [8, 0],
+    [10, 0],
+    [12, 0],
+    [14, 0],
+    [16, 0],
+    [18, 0],
+    [20, 0],
+    [22, 0],
+    [24, 0],
+    [26, 0],
+    [28, 0],
+    [30, 0],
+    [32, 0],
+    [34, 0],
+    [36, 0],
+    [38, 0],
+    [40, 0],
+    [42, 0]
+  ])
+
   const getRandomCoordinates = () => {
     let min = 1;
     let max = 98;
     let randomXY = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+    snakeBody.indexOf([randomXY, randomXY]) > -1 ? getRandomCoordinates():console.log('DIFFERENT')
     return [randomXY, randomXY]
   }
 
   const [food, setFood] = useState(getRandomCoordinates())
   const [direction, setDirection] = useState('RIGHT')
   const [snakeSpeed, setSnakeSpeed] = useState(200)
+<<<<<<< HEAD
   const [snakeBody, setSnakeBody] = useState([
     [0, 0],
     [2, 0],
     [4, 0]
   ])
+=======
+>>>>>>> 9b739ac1690c5117a45019bb5962f7c39bbb80e9
 
   useEffect(() => {
     moveSnake()
