@@ -41,14 +41,6 @@ function App() {
   const [food, setFood] = useState(getRandomCoordinates())
   const [direction, setDirection] = useState('RIGHT')
   const [snakeSpeed, setSnakeSpeed] = useState(200)
-<<<<<<< HEAD
-  const [snakeBody, setSnakeBody] = useState([
-    [0, 0],
-    [2, 0],
-    [4, 0]
-  ])
-=======
->>>>>>> 9b739ac1690c5117a45019bb5962f7c39bbb80e9
 
   useEffect(() => {
     moveSnake()
