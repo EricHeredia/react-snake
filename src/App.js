@@ -3,7 +3,6 @@ import Snake from './components/Snake'
 import Food from './components/Food'
 import './App.css'
 
-
 function App() {
 
   const [snakeBody, setSnakeBody] = useState([
