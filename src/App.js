@@ -83,6 +83,7 @@ function App() {
     setSnakeBody(body)
   }
 
+
   const onKeyDown = (e) => {
     switch (e.keyCode) {
       case 40:
