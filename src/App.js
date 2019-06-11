@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Snake from './components/Snake'
 import Food from './components/Food'
+import DropMenu from './components/DropMenu'
 import './App.css'
 
 function App() {
@@ -8,34 +9,22 @@ function App() {
   const [snakeBody, setSnakeBody] = useState([
     [0, 0],
     [2, 0],
-    [4, 0],
-    [6, 0],
-    [8, 0],
-    [10, 0],
-    [12, 0],
-    [14, 0],
-    [16, 0],
-    [18, 0],
-    [20, 0],
-    [22, 0],
-    [24, 0],
-    [26, 0],
-    [28, 0],
-    [30, 0],
-    [32, 0],
-    [34, 0],
-    [36, 0],
-    [38, 0],
-    [40, 0],
-    [42, 0]
+    [4, 0]
   ])
 
   const getRandomCoordinates = () => {
-    let min = 1;
-    let max = 98;
-    let randomXY = Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
-    snakeBody.indexOf([randomXY, randomXY]) > -1 ? getRandomCoordinates():console.log('DIFFERENT')
-    return [randomXY, randomXY]
+    const getRandomNumber = () => {
+      let min = 1;
+      let max = 98;
+      return Math.floor((Math.random() * (max - min + 1) + min) / 2) * 2;
+    }
+    let randomX = getRandomNumber()
+    let randomY = getRandomNumber()
+    let snakeString = JSON.stringify(snakeBody)
+    let numberString = JSON.stringify([randomX, randomY])
+    let checkIfFoodIsInSnakeBody = snakeString.indexOf(numberString)
+    checkIfFoodIsInSnakeBody !== -1 && getRandomCoordinates()
+    return [randomX, randomY]
   }
 
   const [food, setFood] = useState(getRandomCoordinates())
@@ -161,6 +150,7 @@ function App() {
       <Snake snakeBody={snakeBody} />
       <Food food={food} />
       <p>{direction}</p>
+      <DropMenu />
     </div>
   )
 }

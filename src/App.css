@@ -3,6 +3,7 @@
   margin: 50px auto;
   width: 400px;
   height: 400px;
+  background-color: black;
   border: 2px solid #000;
 }
 
@@ -10,8 +11,8 @@
   position: absolute;
   width: 2%;
   height: 2%;
-  background-color: #000;
-  border: 1px solid #fff;
+  background-color: rgb(45, 192, 0);
+  border: 1px solid rgb(0, 0, 0);
   z-index: 2;
 }
 
@@ -19,7 +20,11 @@
   position: absolute;
   width: 2%;
   height: 2%;
-  background-color: red;
-  border: 1px solid #fff;
+  background-color: rgb(238, 214, 0);
+  border: 1px solid rgb(0, 0, 0);
   z-index: 1;
+}
+
+p {
+  color: white;
 }
