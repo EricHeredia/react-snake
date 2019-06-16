@@ -4,7 +4,6 @@ import Food from './components/Food'
 import DropMenu from './components/DropMenu'
 import './App.css'
 
-
 function App() {
 
   const [snakeBody, setSnakeBody] = useState([
