@@ -8,6 +8,7 @@ import './App.css'
 function App() {
 
   const [snakeBody, setSnakeBody] = useState([
+    
     [0, 0],
     [2, 0],
     [4, 0]
